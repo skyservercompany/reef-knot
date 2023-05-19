@@ -1,30 +1,28 @@
-import { WagmiConfig, createClient, configureChains } from 'wagmi';
-import { publicProvider } from 'wagmi/providers/public';
+import { createConfig, WagmiConfig } from 'wagmi';
+import { createPublicClient, http } from 'viem';
 import { ReactNode } from 'react';
-import { mainnet, goerli } from 'wagmi/chains';
+import { mainnet } from 'wagmi/chains';
 import { getConnectors } from 'reef-knot/core-react';
 import { rpc } from '../util/rpc';
-
-const { provider, webSocketProvider } = configureChains(
-  [mainnet, goerli],
-  [publicProvider()],
-);
 
 const connectors = getConnectors({
   rpc,
 });
 
-const client = createClient({
+const config = createConfig({
+  logger: console,
   connectors,
   autoConnect: true,
-  provider,
-  webSocketProvider,
+  publicClient: createPublicClient({
+    chain: mainnet,
+    transport: http(),
+  }),
 });
 
 const Wagmi = (props: { children: ReactNode }) => {
   const { children } = props;
 
-  return <WagmiConfig client={client}>{children}</WagmiConfig>;
+  return <WagmiConfig config={config}>{children}</WagmiConfig>;
 };
 
 export default Wagmi;

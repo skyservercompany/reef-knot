@@ -1,5 +1,5 @@
-import { ElementType } from 'react';
-import { Connector } from 'wagmi';
+import type { ElementType } from 'react';
+import type { Connector } from 'wagmi/connectors';
 
 export type WalletAdapterIcons = {
   light: ElementType;

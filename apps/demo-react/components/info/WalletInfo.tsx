@@ -1,10 +1,13 @@
 import {
-  useWeb3,
   useConnectorInfo,
   useSupportedChains,
+  useWeb3,
 } from 'reef-knot/web3-react';
-import { useAccount, useNetwork } from 'wagmi';
-import { Line, Heading } from './styles';
+import { useAccount, useNetwork, useWalletClient } from 'wagmi';
+import { providers, Contract } from 'ethers';
+import { useEffect, useState } from 'react';
+import { Heading, Line } from './styles';
+import erc20 from './abi/erc20.json';
 
 export const WalletInfo = () => {
   const connectorInfo = useConnectorInfo();
@@ -13,8 +16,31 @@ export const WalletInfo = () => {
     (c) => c.chainId,
   );
 
-  // Get data via web3-react
+  const [balance, setBalance] = useState(0);
+
+  const client = useWalletClient();
   const web3Info = useWeb3();
+
+  useEffect(() => {
+    if (!client.data) {
+      return;
+    }
+    const { transport } = client.data;
+    const provider = new (class Provider extends providers.JsonRpcProvider {
+      // eslint-disable-next-line class-methods-use-this
+      send(method: any, params: any): Promise<any> {
+        return transport.request({ method, params });
+      }
+    })();
+    const contract = new Contract('0x', erc20, provider);
+    // @ts-expect-error foo
+    contract.balanceOf(web3Info.account).then((value) => {
+      console.log(value);
+      setBalance(value.toString());
+    });
+  }, [client]);
+
+  // Get data via web3-react
 
   // Get data via wagmi
   const {
@@ -30,6 +56,7 @@ export const WalletInfo = () => {
     <div>
       <Heading>web3-react data:</Heading>
       <div>
+        <div>balance: {balance}</div>
         <code>
           <Line>providerName: {connectorInfo.providerName}</Line>
           <Line>

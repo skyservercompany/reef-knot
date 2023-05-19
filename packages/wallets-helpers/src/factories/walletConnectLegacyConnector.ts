@@ -22,8 +22,8 @@ export const getWalletConnectConnector = ({
   rpc: Record<number, string>;
   noMobileLinks?: boolean;
   qrcode?: boolean;
-}) => {
-  return new WalletConnectLegacyConnector({
+}) =>
+  new WalletConnectLegacyConnector({
     options: {
       rpc: prepareWalletConnectRPC(rpc),
       qrcode,
@@ -33,4 +33,3 @@ export const getWalletConnectConnector = ({
       },
     },
   });
-};

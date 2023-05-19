@@ -1,16 +1,17 @@
 import { WalletAdapterType } from '@reef-knot/types';
-import { Ethereum as EthereumTypeWagmi } from '@wagmi/core';
+import { WindowProvider as EthereumTypeWagmi } from '@wagmi/connectors';
 import { InjectedConnector } from 'wagmi/connectors/injected';
 import WalletIcon from './icons/phantom.svg';
 
-declare module '@wagmi/core' {
-  interface Ethereum {
+declare module '@wagmi/connectors' {
+  interface WindowProvider {
     isPhantom?: true;
   }
 }
 
 declare global {
   interface Window {
+    ethereum?: EthereumTypeWagmi;
     phantom?: { ethereum?: EthereumTypeWagmi };
   }
 }

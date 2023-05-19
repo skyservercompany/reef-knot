@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-shadow
 export enum PROVIDER_NAMES {
   GNOSIS = 'Gnosis',
   METAMASK = 'MetaMask',
@@ -17,6 +18,7 @@ export enum PROVIDER_NAMES {
   ZERION = 'Zerion',
 }
 
+// eslint-disable-next-line no-shadow
 export enum CONNECTOR_NAMES {
   GNOSIS = 'gnosis',
   WALLET_LINK = 'walletlink',
