@@ -2510,10 +2510,10 @@
   dependencies:
     typescript "^4.7"
 
-"@lidofinance/lido-ui@3.14.1":
-  version "3.14.1"
-  resolved "https://registry.yarnpkg.com/@lidofinance/lido-ui/-/lido-ui-3.14.1.tgz#780d32c3321295a40d44c352a307029a2b574e43"
-  integrity sha512-8vqv1E9ldPAIAceANPrh1alLPFWbYzz8AO6RhNbtFms+yPd5P2nSh5OopBLB1G2HE4lGFF0c3OXbMgyEcq9pEQ==
+"@lidofinance/lido-ui@3.10.1":
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/@lidofinance/lido-ui/-/lido-ui-3.10.1.tgz#1c1c8be83effd39a2193ee01a38736b8eac8a612"
+  integrity sha512-0vlz82paslY3AF3FsszHNpZ8UbSFJKZHKQ5BmG33rEB28D25RQxN4o/thJ30Ogvr0jHiIZxv2km8uyRsFbHP9w==
   dependencies:
     "@styled-system/should-forward-prop" "5.1.5"
     "@swc/helpers" "^0.4.11"
@@ -2526,10 +2526,10 @@
     ua-parser-js "^1.0.35"
     use-callback-ref "1.2.5"
 
-"@lidofinance/lido-ui@^3.14.2":
-  version "3.14.2"
-  resolved "https://registry.yarnpkg.com/@lidofinance/lido-ui/-/lido-ui-3.14.2.tgz#ad53a9fd12c188dc16f9bb584187a9500b677c4b"
-  integrity sha512-dBa0NDZCYfIduozBQ9Io8VaEr22K6hjWa4ZsqTTbEpcrT9GwR1DhTesE9LdWXo7IhKN/niwQrO+siAaV7KlROw==
+"@lidofinance/lido-ui@3.14.1":
+  version "3.14.1"
+  resolved "https://registry.yarnpkg.com/@lidofinance/lido-ui/-/lido-ui-3.14.1.tgz#780d32c3321295a40d44c352a307029a2b574e43"
+  integrity sha512-8vqv1E9ldPAIAceANPrh1alLPFWbYzz8AO6RhNbtFms+yPd5P2nSh5OopBLB1G2HE4lGFF0c3OXbMgyEcq9pEQ==
   dependencies:
     "@styled-system/should-forward-prop" "5.1.5"
     "@swc/helpers" "^0.4.11"
@@ -3594,6 +3594,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-is@17.0.2":
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/@types/react-is/-/react-is-17.0.2.tgz#abc4d910bff5b0bc6b3e1bec57575f6b63fd4e05"
+  integrity sha512-2+L0ilcAEG8udkDnvx8B0upwXFBbNnVwOsSCTxW3SDOkmar9NyEeLG0ZLa3uOEw9zyYf/fQapcnfXAVmDKlyHw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-test-renderer@>=16.9.0":
   version "18.0.1"
   resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-18.0.1.tgz#d3f308912fcc4491e4fbc134b906bb65bdee73f6"
@@ -3601,10 +3608,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-transition-group@4.4.2":
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.2.tgz#38890fd9db68bf1f2252b99a942998dc7877c5b3"
-  integrity sha512-KibDWL6nshuOJ0fu8ll7QnV/LVTo3PzQ9aCPnRUYPfX7eZohHwLIdNHj7pftanREzHNP4/nJa8oeM73uSiavMQ==
+"@types/react-transition-group@^4.4.6":
+  version "4.4.6"
+  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.6.tgz#18187bcda5281f8e10dfc48f0943e2fdf4f75e2e"
+  integrity sha512-VnCdSxfcm08KjsJVQcfBmhEQAPnLB8G08hAxn39azX1qYBQ/5RVQuoHuKIcfKOdncuaUvEpFKFzEvbtIMsfVew==
   dependencies:
     "@types/react" "*"
 
@@ -3645,6 +3652,18 @@
     "@types/hoist-non-react-statics" "*"
     "@types/react" "*"
     csstype "^3.0.2"
+
+"@types/styled-system@^5.1.16":
+  version "5.1.22"
+  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.22.tgz#508499f4c68bb86dde3454693e92f5771edf177f"
+  integrity sha512-NbRp37zWcrf/+Qf2NumdyZfhSx1dzJ50zgfKvnezYJx1HTRUMVYY8jtWvK1eoIAa6F5sXwHLhE8oXNu15ThBAA==
+  dependencies:
+    csstype "^3.0.2"
+
+"@types/styled-system__should-forward-prop@^5.1.2":
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/@types/styled-system__should-forward-prop/-/styled-system__should-forward-prop-5.1.4.tgz#85dd2748be9c31e21f9063343ad4f924f65aeb75"
+  integrity sha512-Dh8OS/TeusBN+9mL/AUMHa71XNV8YFEEqT58xaKGrPqllC0wosZMmkTfM2pAzJailWPYaXD3r88a82Lu71j1Kg==
 
 "@types/tough-cookie@*":
   version "4.0.2"

@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import {
-  Text,
   Button,
+  Text,
   Stack,
   StackItem,
   useBreakpoint,
-} from '@lidofinance/lido-ui';
+} from '@reef-knot/ui-react';
 import styled from '@reef-knot/ui-react/styled-wrapper';
 import { LedgerScreenContainerStyled } from './styles';
 import { LedgerImageError } from './icons/LedgerImageError';

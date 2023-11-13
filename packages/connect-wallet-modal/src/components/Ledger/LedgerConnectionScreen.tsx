@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, StackItem, Text, useBreakpoint } from '@lidofinance/lido-ui';
+import { Text, Stack, StackItem, useBreakpoint } from '@reef-knot/ui-react';
 import { LedgerImageDefault } from './icons/LedgerImageDefault';
 import { LedgerImageDefaultMobile } from './icons/LedgerImageDefaultMobile';
 import { LedgerScreenContainerStyled } from './styles';

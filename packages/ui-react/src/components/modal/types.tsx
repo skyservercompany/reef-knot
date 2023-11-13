@@ -2,7 +2,7 @@ import React from 'react';
 import {
   TransitionWrapperProps,
   TransitionInnerProps,
-} from '../withTransition';
+} from '../transition';
 import { ButtonProps } from '../button';
 import { CommonComponentProps } from '../../utils';
 

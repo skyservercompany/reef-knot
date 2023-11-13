@@ -2,7 +2,7 @@ import React, { ForwardedRef, forwardRef } from 'react';
 import ReactDOM from 'react-dom';
 import modalRoot from './modalRoot';
 import { useMergeRefs, useEscape, useLockScroll } from '../../hooks';
-import { withTransition } from '../withTransition';
+import { withTransition } from '../transition';
 import { ModalOverlayInnerProps } from './types';
 import {
   ModalPortalStyle,

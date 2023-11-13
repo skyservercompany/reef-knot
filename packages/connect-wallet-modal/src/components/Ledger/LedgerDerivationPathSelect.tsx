@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Box, Option, Select } from '@lidofinance/lido-ui';
+import { Box, Select, Option } from '@reef-knot/ui-react';
 import styled from '@reef-knot/ui-react/styled-wrapper';
 import { DERIVATION_PATHS } from './constants';
 
@@ -17,7 +17,7 @@ export const LedgerDerivationPathSelect: FC<{
 }> = ({ onChange, value }) => (
   <Box>
     <TextStyled color="secondary">Select HD derivation path</TextStyled>
-    <Select onChange={onChange} value={value} fullwidth themeOverride="light">
+    <Select onChange={onChange} value={value} fullwidth>
       {DERIVATION_PATHS.map((path) => (
         <Option value={path.template} key={path.template}>
           {path.title}

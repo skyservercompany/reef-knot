@@ -1,6 +1,6 @@
 import React, { FC, useCallback, useEffect, useState } from 'react';
 import styled from '@reef-knot/ui-react/styled-wrapper';
-import { Pagination, Stack, StackItem } from '@lidofinance/lido-ui';
+import { Pagination, Stack, StackItem } from '@reef-knot/ui-react';
 import { AccountButton, AccountButtonSkeleton } from './LedgerAccountButton';
 import { useLedgerAccounts, useLedgerContext } from './hooks';
 import { getFirstIndexOnPage, saveLedgerDerivationPath } from './helpers';

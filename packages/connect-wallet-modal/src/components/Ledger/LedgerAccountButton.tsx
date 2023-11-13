@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Address, Text, useBreakpoint } from '@lidofinance/lido-ui';
+import { Address, Text, useBreakpoint } from '@reef-knot/ui-react';
 import styled, { keyframes } from '@reef-knot/ui-react/styled-wrapper';
 import { LedgerWalletIcon } from './icons/LedgerWalletIcon';
 import { AccountRecord } from './types';

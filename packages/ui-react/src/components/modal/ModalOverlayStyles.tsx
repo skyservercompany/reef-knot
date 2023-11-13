@@ -1,5 +1,5 @@
 import styled from '../../utils/styledWrapper.js';
-import { TransitionInnerProps } from '../withTransition';
+import { TransitionInnerProps } from '../transition';
 
 type TransitionProps = {
   $duration: number;
