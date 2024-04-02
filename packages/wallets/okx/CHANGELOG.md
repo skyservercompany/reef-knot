@@ -1,5 +1,11 @@
 # @reef-knot/wallet-adapter-okx
 
+## 1.5.0
+
+### Minor Changes
+
+- Add deeplinks
+
 ## 1.4.0
 
 ### Minor Changes

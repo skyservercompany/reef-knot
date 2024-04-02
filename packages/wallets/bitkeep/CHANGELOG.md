@@ -1,5 +1,11 @@
 # @reef-knot/wallet-adapter-bitkeep
 
+## 1.3.0
+
+### Minor Changes
+
+- Add deeplinks
+
 ## 1.2.0
 
 ### Minor Changes

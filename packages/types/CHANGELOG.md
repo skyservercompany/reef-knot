@@ -1,5 +1,11 @@
 # @reef-knot/types
 
+## 1.7.0
+
+### Minor Changes
+
+- Add deeplinks
+
 ## 1.6.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @reef-knot/core-react
 
+## 3.1.0
+
+### Minor Changes
+
+- Add deeplinks
+
 ## 3.0.0
 
 ### Major Changes

@@ -1,5 +1,15 @@
 # @reef-knot/connect-wallet-modal
 
+## 4.1.0
+
+### Minor Changes
+
+- Add deeplinks
+
+### Patch Changes
+
+- @reef-knot/wallets-list@1.13.1
+
 ## 4.0.0
 
 ### Major Changes
