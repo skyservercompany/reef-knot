@@ -32,6 +32,8 @@ export type WalletAdapterData = {
     ios?: string;
   };
 
+  deeplink?: string;
+
   connector: Connector;
 
   // Additional options for wallets based on WalletConnect

@@ -1,5 +1,5 @@
+import { isAndroid, isIOS } from '@reef-knot/core-react';
 import { openWindow } from './openWindow';
-import { isAndroid, isIOS } from './userAgents';
 
 export const suggestApp = (urls: {
   default: string;

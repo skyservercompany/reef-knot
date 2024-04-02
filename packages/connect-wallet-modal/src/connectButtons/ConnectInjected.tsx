@@ -1,8 +1,8 @@
 import React, { FC, useCallback } from 'react';
 import { useConnect } from 'wagmi';
-import { useDisconnect } from '@reef-knot/web3-react';
+import { useDisconnect, isMobileOrTablet } from '@reef-knot/core-react';
 import { ConnectButton } from '../components/ConnectButton';
-import { capitalize, suggestApp } from '../helpers';
+import { capitalize, suggestApp, openWindow } from '../helpers';
 import { ConnectInjectedProps } from './types';
 
 export const ConnectInjected: FC<ConnectInjectedProps> = (
@@ -19,6 +19,7 @@ export const ConnectInjected: FC<ConnectInjectedProps> = (
     downloadURLs,
     detector,
     connector,
+    deeplink,
     ...rest
   } = props;
   const walletIsDetected = !!detector?.();
@@ -43,12 +44,15 @@ export const ConnectInjected: FC<ConnectInjectedProps> = (
     if (walletIsDetected) {
       disconnect?.();
       await connectAsync({ connector });
+    } else if (isMobileOrTablet && deeplink) {
+      openWindow(deeplink);
     } else if (downloadURLs) {
       suggestApp(downloadURLs);
     }
   }, [
     connectAsync,
     connector,
+    deeplink,
     disconnect,
     downloadURLs,
     metricsOnClick,
@@ -61,7 +65,9 @@ export const ConnectInjected: FC<ConnectInjectedProps> = (
       {...rest}
       icon={WalletIcon}
       shouldInvertWalletIcon={shouldInvertWalletIcon}
-      onClick={handleConnect}
+      onClick={() => {
+        void handleConnect();
+      }}
     >
       {walletName}
     </ConnectButton>
